@@ -1,0 +1,25 @@
+.container-main {
+  max-width: 980px;
+  margin: auto;
+
+  @include desktop {
+    padding: 0 45px 0 25px;
+  }
+}
+
+.title__name {
+  font-family: $poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 15px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 10px;
+  }
+}

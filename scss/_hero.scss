@@ -1,0 +1,190 @@
+// header section
+.header {
+  padding-top: 110px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  &__left {
+    font-family: $pt-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  &__right {
+    p {
+      max-width: 440px;
+      font-family: $poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 10px;
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+// team section
+.team {
+  padding-bottom: 100px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 40px;
+    grid-auto-flow: row;
+
+    grid-template-areas:
+      "one . three"
+      "one two three"
+      ". two ."
+      "four . six"
+      "four five six"
+      ". five .";
+
+    .one {
+      grid-area: one;
+    }
+
+    .two {
+      grid-area: two;
+    }
+
+    .three {
+      grid-area: three;
+    }
+
+    .four {
+      grid-area: four;
+    }
+
+    .five {
+      grid-area: five;
+    }
+
+    .six {
+      grid-area: six;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0 30px;
+      grid-template-areas:
+        "one ."
+        "one two"
+        ". two"
+        ". ."
+        "three ."
+        "three four"
+        ". four"
+        "five ."
+        "five six"
+        ". six";
+
+      .one {
+        grid-area: one;
+      }
+
+      .two {
+        grid-area: two;
+      }
+
+      .three {
+        grid-area: three;
+      }
+
+      .four {
+        grid-area: four;
+      }
+
+      .five {
+        grid-area: five;
+      }
+
+      .six {
+        grid-area: six;
+      }
+    }
+  }
+}
+
+.team__card {
+  padding-bottom: 50px;
+
+  @include tablet {
+    padding-bottom: 20px;
+  }
+
+  .img-text {
+    position: relative;
+
+    span {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 108%;
+      font-family: $pt-serif;
+
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-transform: uppercase;
+
+      @include tablet {
+        font-size: 10px;
+        line-height: 13px;
+      }
+
+      transform-origin: 0 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+footer {
+  text-align: center;
+
+  p {
+    font-family: $montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #a9a9a9;
+    margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 10px;
+    }
+
+    a {
+      color: #a9a9a9;
+      text-decoration: underline;
+    }
+  }
+}
